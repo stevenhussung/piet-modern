@@ -13,3 +13,5 @@ Done! Next is refactoring the code so that we can keep color palettes in a separ
 ##Invariants: It would be cool to demonstrate piet invariants, perhaps using piet itself? Interesting idea. 
 
 To demonstrate: store something in the stack (hello world? Just Hi?), perform the invariant until identity, the output the stack, repeat.
+
+Even better! Use the invariants as a series of programs that look different but accomplish the same thing. Maybe. If you can be clever about it I think you can have fun.
