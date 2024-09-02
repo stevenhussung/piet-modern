@@ -18,18 +18,8 @@ with open(input_file_name, 'r') as csv_file:
 
 print(input_csv)
 
-default_palette = {
-    'maxval' : '3',
-    'W' : '3 3 3',
-    'B' : '0 0 0',
-    '1A' : '3 0 0' , '1B' : '2 0 0' , '1C' : '1 0 0' ,
-    '2A' : '3 3 0' , '2B' : '2 2 0' , '2C' : '1 1 0' ,
-    '3A' : '0 3 0' , '3B' : '0 2 0' , '3C' : '0 1 0' ,
-    '4A' : '0 3 3' , '4B' : '0 2 2' , '4C' : '0 1 1' ,
-    '5A' : '0 0 3' , '5B' : '0 0 2' , '5C' : '0 0 1' ,
-    '6A' : '3 0 3' , '6B' : '2 0 2' , '6C' : '1 0 1' ,
-}
-
+#Goal: mimic input for npiet for running code
+#Currently from Gabriella Singh Cadieux
 default_palette = {
     'maxval' : '255',
     'W' : '255 255 255',
@@ -39,8 +29,30 @@ default_palette = {
     '1C' : '200 0 0'     , '2C' : '220 200 0'   , '3C' : '0 200 0'     , '4C' : '0 200 200'   , '5C' : '0   0   200' , '6C' : '200 0 200' 
 }
 
+#Mimic input for npiet with sli
+default_palette_adjusted = {
+    'maxval' : '255',
+    'W' : '255 255 255',
+    'B' : '0 0 0',
+    '1A' : '255 200 200' , '2A' : '255 255 200' , '3A' : '180 255 180' , '4A' : '200 255 255' , '5A' : '200 200 255' , '6A' : '255 200 255' ,
+    '1B' : '255 0 0'     , '2B' : '255 255 0'   , '3B' : '0 255 0'     , '4B' : '0 255 255'   , '5B' : '0   0   255' , '6B' : '255 0 255' ,
+    '1C' : '200 0 0'     , '2C' : '220 200 0'   , '3C' : '0 200 0'     , '4C' : '0 200 200'   , '5C' : '0   0   200' , '6C' : '200 0 200' 
+}
+
+#https://coolors.co/palette/01befe-ffdd00-ff7d00-ff006d-adff02-8f00ff
+modern_palette_standard = {
+    'maxval' : '255',
+    'W' : '255 255 255',
+    'B' : '0 0 0',
+    #Raspberry            #Orange               #Yellow               #Lime                 #Cyan                 #Purple
+    '1A' : '255 120 230', '2A' : '255 200 140', '3A' : '255 240 136', '4A' : '215 255 132', '5A' : '145 227 255', '6A' : '203 138 255',
+    '1B' : '255   0 109', '2B' : '255 125 0'  , '3B' : '255 221 0'  , '4B' : '173 255   2', '5B' : '  1 190 255', '6B' : '143   0 255',
+    '1C' : '200   0  85', '2C' : '200 100 0'  , '3C' : '200 170 0'  , '4C' : '136 200   0', '5C' : '  1 150 200', '6C' : '102   0 180' 
+}
+
 #Convert csv to rgb codes
 palette = default_palette
+#palette = modern_palette_standard
 input_csv = [[palette[cell] for cell in row] for row in input_csv]
 
 #input_csv = map(input_csv, lambda row : map(row, lambda cell : palette[cell]))
