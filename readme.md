@@ -18,3 +18,5 @@ Even better! Use the invariants as a series of programs that look different but 
 
 ## Linux issue
 For some reason, the python code to read the ppm output using the python Pillow package fails on my Linux Mint install.
+
+Test.
